@@ -1,0 +1,99 @@
+/* ==================================================================
+   📝 STICKY NOTE — styles.css
+   Nothing here is part of the challenge. Use it as-is.
+   ================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  min-height: 100vh;
+  background: #1f2a44; /* a dark corkboard */
+  color: #f4f1ea;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.tagline {
+  margin: 4px 0 28px;
+  color: #b8c4dd;
+}
+
+/* The note: a tilted square of paper */
+#note {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 340px;
+  margin: 0 auto;
+  padding: 24px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  transform: rotate(-2deg);
+  font-family: "Comic Sans MS", "Marker Felt", cursive;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #2b2b2b;
+  resize: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#note:focus {
+  outline: none;
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* The 3 colors. scripts.js puts ONE of these classes on the note. */
+#note.yellow { background: #fff176; }
+#note.pink   { background: #f8bbd0; }
+#note.blue   { background: #b3e5fc; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+#char-count {
+  margin: 0;
+  color: #b8c4dd;
+}
+
+.colors {
+  display: flex;
+  gap: 6px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 2px solid #3d4f7a;
+  border-radius: 999px;
+  background: #2a3758;
+  color: #f4f1ea;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #fff176;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

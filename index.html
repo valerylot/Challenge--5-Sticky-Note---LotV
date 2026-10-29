@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+  📝 STICKY NOTE — index.html
+  Day 14 · Mini Challenge (20 min, pairs)
+
+  A sticky note that remembers what you wrote, even after a reload.
+  How to run it: right-click index.html → Open with Live Server.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sticky Note</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>📝 Sticky Note</h1>
+    <p class="tagline">Write anything. Reload. It's still here. Magic. ✨</p>
+
+    <!-- The note itself. class="yellow" is the starting color. -->
+    <label for="note" class="visually-hidden">Your note</label>
+    <textarea id="note" class="yellow" placeholder="Remember to... 🤔"></textarea>
+
+    <div class="toolbar">
+      <!-- BONUS 1 · character counter -->
+      <p id="char-count">0 characters</p>
+
+      <!-- BONUS 2 · color buttons. data-color tells scripts.js which color. -->
+      <div class="colors">
+        <button type="button" class="color-btn" data-color="yellow" aria-label="Yellow note">🟨</button>
+        <button type="button" class="color-btn" data-color="pink" aria-label="Pink note">🩷</button>
+        <button type="button" class="color-btn" data-color="blue" aria-label="Blue note">🟦</button>
+      </div>
+
+      <button type="button" id="clear-btn">🗑️ Clear note</button>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
