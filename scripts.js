@@ -27,7 +27,7 @@ const charCount = document.getElementById("char-count");
 // Read "sticky-note" from localStorage and put it in note.value.
 // 💡 Hint: on the first visit there's nothing saved (null).
 //          Add || "" so the note doesn't literally say "null".
-let stickyNote = localStorage.getItem("sticky-note") || "";
+note.value = localStorage.getItem("sticky-note") || "";
 
 
 // ---------------------------------------------------------------------
